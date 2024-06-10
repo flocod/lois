@@ -126,3 +126,34 @@ button {
 button:hover {
   background-color: #ff4500;
 }
+
+.play {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  font-size: 1.5em;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  color: #ff4500;
+  border: 10px double #ff4500;
+  -webkit-box-shadow: 0px 0px 4px 2px #ff4500;
+          box-shadow: 0px 0px 4px 2px #ff4500;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: 1em;
+}
+.play:active {
+  color: white;
+  background: #ff4500;
+}
