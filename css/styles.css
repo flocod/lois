@@ -80,6 +80,10 @@ p {
   margin-bottom: 10px;
 }
 
+.voeux {
+  font-size: 1.5em;
+}
+
 pre {
   width: 100%;
   white-space: initial;

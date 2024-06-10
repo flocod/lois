@@ -126,6 +126,8 @@ function nextSlide() {
 }
 
 // Initialisation
-afficherVoeux();
 gsap.to(slides[0], {duration: 1, opacity: 1});
-setInterval(nextSlide, 6000); // Changer d'image toutes les 3 secondes
+setInterval(nextSlide, 10000); // Changer d'image toutes les 3 secondes
+
+document.getElementById("audio").play();
+afficherVoeux();
