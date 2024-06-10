@@ -212,3 +212,13 @@ window.onload = function() {
 
   poof();
 };
+
+
+
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+
+confetti();
+
+window.addEventListener("click", () => {
+  confetti();
+});
