@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 100svh;
   margin: 0;
 //   background-color:white;
   user-select: none;
@@ -56,7 +56,7 @@ body {
 
 .container {
   text-align: center;
-  padding: 20px;
+//   padding: 20px;
   border-radius: 10px;
   width: 90%;
 }
@@ -67,7 +67,7 @@ h1 {
 font-family: "Luckiest Guy", cursive;
 font-style: normal;
   line-height: 1em;
-  font-size: 14vw;
+  font-size: 13.5vw;
   margin-top: 0;
   margin-bottom: 0;
   
@@ -89,6 +89,7 @@ p {
     // text-align: justify;
     // text-align-last: left;
     font-weight: bold;
+
 }
 
 pre {
@@ -102,7 +103,7 @@ pre {
 .slideshow {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 60svh;
     margin: 10px auto;
     // overflow: hidden;
 
