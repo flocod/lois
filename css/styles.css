@@ -5,6 +5,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Roboto VF";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/Roboto-VF.woff2") format("woff2-variations");
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-weight: 100 900;
+}
 :root {
   /* Colors */
   --radial-gradian: radial-gradient(
@@ -67,6 +74,7 @@ body {
 h1 {
   color: #ff6347;
   font-family: "Luckiest Guy", cursive;
+  font-family: "Roboto VF";
   font-style: normal;
   line-height: 1em;
   font-size: 13.5vw;
@@ -192,5 +200,86 @@ button:hover {
   }
   to {
     -webkit-filter: hue-rotate(-360deg);
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --text-weight: 500;
+  --text-width: 100;
+  --text-slant: 0;
+}
+
+.line1,
+.line2 {
+  display: block;
+}
+
+.line1 {
+  font-size: 3vw;
+  font-weight: 845;
+  color: rgba(255, 255, 255, 0.1803921569);
+}
+
+.splitting {
+  --text-weight-min: 100;
+  --text-weight-max: 900;
+  --text-slant-min: 1;
+  --text-slant-max: 12;
+  --text-width-min: 75;
+  --text-width-max: 100;
+  --glow-hue-min: 0;
+  --glow-hue-max: 255;
+  --glow-size-min: 0;
+  --glow-size-max: 15;
+  --glow-lightness: 57%;
+  --delay: 0;
+  --duration: 3s;
+  --percent: 0;
+}
+
+.char {
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  -webkit-animation: wave var(--duration) ease-in-out var(--delay) infinite alternate;
+          animation: wave var(--duration) ease-in-out var(--delay) infinite alternate;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  --percent: calc(var(--char-index) / var(--char-total));
+  --delay: calc(var(--percent) * var(--duration));
+  --glow-hue: calc(var(--percent) * 510);
+}
+
+@-webkit-keyframes wave {
+  0% {
+    font-variation-settings: "wght" var(--text-weight-min), "wdth" var(--text-width-min), "slnt" var(--text-slant-min);
+    text-shadow: 0 0 calc(var(--glow-size-min) * 1px) hsla(var(--glow-hue), 100%, var(--glow-lightness), 1);
+  }
+  50% {
+    font-variation-settings: "wght" var(--text-weight-max), "wdth" var(--text-width-max), "slnt" var(--text-slant-max);
+    text-shadow: 0 0 calc(var(--glow-size-max) * 1px) hsla(calc(var(--glow-hue) + 255), 100%, var(--glow-lightness), 1);
+  }
+  100% {
+    font-variation-settings: "wght" var(--text-weight-min), "wdth" var(--text-width-min), "slnt" var(--text-slant-min);
+    text-shadow: 0 0 calc(var(--glow-size-min) * 1px) hsla(var(--glow-hue), 100%, var(--glow-lightness), 1);
+  }
+}
+
+@keyframes wave {
+  0% {
+    font-variation-settings: "wght" var(--text-weight-min), "wdth" var(--text-width-min), "slnt" var(--text-slant-min);
+    text-shadow: 0 0 calc(var(--glow-size-min) * 1px) hsla(var(--glow-hue), 100%, var(--glow-lightness), 1);
+  }
+  50% {
+    font-variation-settings: "wght" var(--text-weight-max), "wdth" var(--text-width-max), "slnt" var(--text-slant-max);
+    text-shadow: 0 0 calc(var(--glow-size-max) * 1px) hsla(calc(var(--glow-hue) + 255), 100%, var(--glow-lightness), 1);
+  }
+  100% {
+    font-variation-settings: "wght" var(--text-weight-min), "wdth" var(--text-width-min), "slnt" var(--text-slant-min);
+    text-shadow: 0 0 calc(var(--glow-size-min) * 1px) hsla(var(--glow-hue), 100%, var(--glow-lightness), 1);
   }
 }
