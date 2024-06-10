@@ -128,4 +128,4 @@ function nextSlide() {
 // Initialisation
 afficherVoeux();
 gsap.to(slides[0], {duration: 1, opacity: 1});
-setInterval(nextSlide, 4500); // Changer d'image toutes les 3 secondes
+setInterval(nextSlide, 6000); // Changer d'image toutes les 3 secondes
