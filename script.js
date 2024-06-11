@@ -104,7 +104,8 @@ function afficherVoeux() {
     const voeuxAleatoire = voeux[Math.floor(Math.random() * voeux.length)];
 
     gsap.to(voeuxElement, {duration: 0.5, opacity: 0, onComplete: () => {
-        voeuxElement.textContent = voeuxAleatoire;
+        // voeuxElement.textContent = voeuxAleatoire;
+        document.getElementById("voeuxcontainer").textContent=voeuxAleatoire;
         gsap.to(voeuxElement, {duration: 0.5, opacity: 1});
     }});
 }
@@ -114,9 +115,11 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slideshow .img');
 
 function showSlide(index) {
+    gsap.from(slides[currentSlide], {duration: 1, y: 0, scale: 2});
     gsap.to(slides[currentSlide], {duration: 1, opacity: 0});
     currentSlide = index;
     gsap.to(slides[currentSlide], {duration: 1, opacity: 1});
+    gsap.from(slides[currentSlide], {duration: 12, y: 0, scale: 2});
 }
 
 function nextSlide() {

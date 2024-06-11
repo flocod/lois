@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta name="color-scheme" content="dark light" />
+    <!-- <meta name="color-scheme" content="dark light" /> -->
     <meta name="theme-color" content="#eaeaea" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,14 +69,27 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="gradient" data-splitting>Joyeux anniversaire <br />loïs nyamsi !</h1>
+      <h1 class="gradient" data-splitting>
+        Joyeux anniversaire <br />loïs nyamsi !
+      </h1>
 
       <div class="slideshow">
         <div id="play" class="play" onclick="toggleAudio()">
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-            </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            color="#000000"
+            fill="none"
+          >
+            <path
+              d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
         <div class="img">
           <img src="img/img1.jpeg" class="slide" />
@@ -164,7 +177,9 @@
         </div>
       </div>
 
-      <p id="voeux" class="voeux"></p>
+      <p id="voeux" class="voeux">
+        <span id="voeuxcontainer" class="container"></span>
+      </p>
 
       <!-- <pre>
         Loïs, En ce jour du 10 juin 2024, où le soleil brille d'un éclat
@@ -206,7 +221,7 @@
     </div>
     <audio id="audio" controls style="display: none">
       <source
-      id="audioSource"
+        id="audioSource"
         src="audio/Classical Music Happy Birthday with Full Orchestra.mp3"
         type="audio/mpeg"
       />
@@ -216,7 +231,7 @@
     <script type="module" src="confretis.js"></script>
     <!-- <script  src="splitting.js"></script> -->
     <script>
-        // Splitting();
+      // Splitting();
     </script>
   </body>
 </html>
